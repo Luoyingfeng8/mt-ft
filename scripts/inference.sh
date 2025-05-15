@@ -50,9 +50,9 @@ for lang in de ru zh cs vi ko ne sw ha;do
         swift infer \
             --infer_backend pt \
             --val_dataset $test_file \
-            --load_from_cache_file True \
             --dataset_shuffle False \
             --val_dataset_shuffle False \
+            --model_type qwen3 \
             --model $predict_model_dir \
             --torch_dtype bfloat16 \
             --max_new_tokens 512 \

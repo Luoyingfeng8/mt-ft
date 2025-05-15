@@ -41,7 +41,6 @@ for i in ${!sizes[@]}; do
         --deepspeed  $config_file \
         --add_version False \
         --check_model False \
-        --load_from_cache_file \
         --model $model_dir \
         --train_type full \
         --attn_impl flash_attn \

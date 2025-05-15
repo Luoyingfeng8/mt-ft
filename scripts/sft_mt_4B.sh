@@ -31,7 +31,7 @@ for i in ${!sizes[@]}; do
     train_dataset=$ROOT_DIR/data/sft_train/train.${data_size}k.jsonl
     val_dataset=$ROOT_DIR/data/sft_train/valid.jsonl
 
-    tag=sft_${data_size}k_${batch}
+    tag=sft_${data_size}k
     output_dir=$ROOT_DIR/exps/$model_name/$tag
     mkdir -p $output_dir
     cp $0 $output_dir
@@ -41,7 +41,6 @@ for i in ${!sizes[@]}; do
         --deepspeed  $config_file \
         --add_version False \
         --check_model False \
-        --load_from_cache_file \
         --model $model_dir \
         --train_type full \
         --attn_impl flash_attn \
