@@ -22,8 +22,8 @@ max_lengths=1024
 num_train_epochs=2
 
 sizes=(0.5 1 5 10 30 50 100 200 500)
-batch=(8 8 16 16 16 16 16 16 16)
-grad_accu=(1 1 1 2 4 4 8 8 12)
+batch=(8 8 8 8 8 8 8 8 8)
+grad_accu=(1 1 2 4 8 8 16 16 24)
 
 
 for i in ${!sizes[@]}; do 
